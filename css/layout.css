@@ -1,0 +1,7 @@
+.layout {
+    margin: auto;
+    max-inline-size: 85.375rem;
+    display: grid;
+    grid-template-columns: 27.5rem 1fr;
+    grid-template-areas: 'sidebar chat';
+}

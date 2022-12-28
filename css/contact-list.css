@@ -1,0 +1,82 @@
+.contact-list {
+    block-size: calc(100vh - 2 * var(--blockSize) );
+    overflow: auto;
+}
+
+.contact-chat.is-active {
+    background-color: var(--grey-2);
+}
+
+.contact-chat {
+    text-decoration: none;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    grid-template-areas: 'picture message';
+    gap: .5rem;
+    block-size: var(--blockSize);
+    box-sizing: border-box;
+    /* border-block-end: 1px solid red; */
+    position: relative;
+}
+
+.contact-chat::before {
+    content: '';
+    position: absolute;
+    block-size: 1px;
+    max-inline-size: 100%;
+    inset-block-end: 0;
+    inset-inline: 2rem;
+    background-color: var(--grey-2);
+}
+
+.contact-picture {
+    grid-area: picture;
+    display: flex;
+    align-items: center;
+}
+
+.contact-picture img {
+    vertical-align: middle;
+}
+
+.contact-body {
+    grid-area: message;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.contact-name p, .contact-day p, .contact-message p {
+    margin: 0;
+}
+
+.contact-name p {
+    font: var(--body-16regular);
+    color: var(--black);
+}
+
+.contact-day p {
+    font: var(--caption-12regular);
+    color: var(--grey);
+}
+
+.contact-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-message {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+}
+
+.contact-message p {
+    font: var(--caption-12regular);
+    color: var(--grey);
+}
+

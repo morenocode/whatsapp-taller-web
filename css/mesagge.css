@@ -1,0 +1,86 @@
+.message {
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    max-inline-size: 50%;
+}
+
+.message-text {
+    margin: 0;
+    color: var(--black);
+    font: var(--body-16regular);
+}
+
+.message.is-receiver {
+    background-color: var(--white);
+    border-radius: 0 .5rem .5rem .5rem;
+    align-self: flex-start;
+    position: relative;
+}
+
+.message.is-receiver::after {
+    content: '';
+    position: absolute;
+    
+    inset-inline-end: 100%;
+    inset-block-start: 0;
+
+    inline-size: .75rem;
+    aspect-ratio: 1;
+    box-sizing: border-box;
+
+    border-block-start: .375rem solid var(--white);
+    border-inline-end: .375rem solid var(--white);
+    border-block-end: .375rem solid transparent;
+    border-inline-start: .375rem solid transparent;
+
+    /* transform: translate(-1.5rem); */
+    
+}
+
+.message.is-sender {
+    background-color: var(--green-1);
+    border-radius: .5rem 0 .5rem .5rem;
+    align-self: flex-end;
+    position: relative;
+}
+
+.message.is-sender::before {
+    content: '';
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 100%;
+
+    inline-size: .75rem;
+    aspect-ratio: 1;
+    box-sizing: border-box;
+
+    border-block-start: .375rem solid var(--green-1);
+    border-inline-end: .375rem solid transparent;
+    border-block-end: .375rem solid transparent;
+    border-inline-start: .375rem solid var(--green-1);
+    /* transform: translate(1.5rem); */
+}
+
+.message-details {
+    display: flex;
+    justify-content: flex-end;
+    gap: .25rem;
+}
+
+.message-date {
+    color: var(--grey);
+    font: var(--caption-12regular);
+}
+
+.message-status {
+    inline-size: 1rem;
+    aspect-ratio: 1;
+}
+
+.message-status.is-doubleCheck {
+    background-image: url('../images/icon-dobleCheck.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}

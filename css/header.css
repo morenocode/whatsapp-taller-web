@@ -1,0 +1,14 @@
+.header {
+    block-size: var(--blockSize);
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--grey-4);
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.header-user, .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}

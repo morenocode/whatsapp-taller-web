@@ -1,0 +1,14 @@
+.form-message {
+    flex: 1;
+}
+
+.form-message input {
+    inline-size: 100%;
+    border-radius: 3.125rem;
+    border: none;
+    padding-block: 1rem;
+    padding-inline: 1.5rem;
+    box-sizing: border-box;
+    font: var(--body-16regular);
+}
+

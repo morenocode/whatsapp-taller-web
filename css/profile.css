@@ -1,0 +1,9 @@
+.profile {
+    background-color: var(--grey-4);
+    block-size: var(--blockSize);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    /* border-inline-end: 1px solid var(--white); */
+}
